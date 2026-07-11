@@ -1,0 +1,12 @@
+<svg width="320" height="64" viewBox="0 0 320 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">MoodJournal</title>
+  <rect x="0" y="10" width="44" height="44" rx="14" fill="#D57A0F"/>
+  <g transform="translate(0 2)">
+    <path d="M14 20.5H30" stroke="#FFF4E7" stroke-width="2" stroke-linecap="round"/>
+    <path d="M14 26H24" stroke="#FFF4E7" stroke-width="2" stroke-linecap="round"/>
+    <path d="M18 19V36.5C18 37.3284 18.6716 38 19.5 38H29.5C30.3284 38 31 37.3284 31 36.5V18.5C31 17.6716 30.3284 17 29.5 17H20C18.8954 17 18 17.8954 18 19Z" stroke="#FFF4E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M21 30.5H29" stroke="#FFF4E7" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="58" y="34" fill="#EDF0F7" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="700" letter-spacing="-0.03em">MoodJournal</text>
+  <text x="58" y="52" fill="#E3ECFF" fill-opacity=".62" font-family="Manrope, Arial, sans-serif" font-size="12" font-weight="500" letter-spacing=".12em">YOUR JOURNAL</text>
+</svg>

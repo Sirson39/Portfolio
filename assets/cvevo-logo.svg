@@ -1,0 +1,15 @@
+<svg width="260" height="64" viewBox="0 0 260 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">CVevo</title>
+  <rect x="0" y="10" width="44" height="44" rx="14" fill="#E7F0EC"/>
+  <g transform="translate(0 0.5)">
+    <rect x="16" y="15.5" width="12" height="19" rx="2.5" stroke="#4DA99A" stroke-width="2"/>
+    <path d="M24 15.5V19.5H28" stroke="#4DA99A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M24 15.5L28 19.5" stroke="#4DA99A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M19 21.5H25" stroke="#4DA99A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M19 25.5H25" stroke="#4DA99A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M19 29.5H23.5" stroke="#4DA99A" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="58" y="41" font-family="Space Grotesk, Manrope, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="-0.03em">
+    <tspan fill="#4DA99A">CV</tspan><tspan fill="#FF9D59">evo</tspan>
+  </text>
+</svg>

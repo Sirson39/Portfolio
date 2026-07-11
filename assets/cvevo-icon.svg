@@ -1,0 +1,8 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CVevo document icon">
+  <rect x="8.5" y="6.5" width="15" height="19" rx="3" stroke="#4DA99A" stroke-width="2"/>
+  <path d="M18 6.5V10.5H22" stroke="#4DA99A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M22 6.5L18 10.5" stroke="#4DA99A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 13.5H20" stroke="#4DA99A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M12 17.5H20" stroke="#4DA99A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M12 21.5H18" stroke="#4DA99A" stroke-width="2" stroke-linecap="round"/>
+</svg>

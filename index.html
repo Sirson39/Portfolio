@@ -1,0 +1,910 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sirson Sharma - creative developer portfolio with premium dark UI, motion effects, and modern web experiences."
+    />
+    <title>Sirson Sharma | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-trail" aria-hidden="true"></div>
+    <canvas id="star-canvas" aria-hidden="true"></canvas>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="gradient-orb orb-1" aria-hidden="true"></div>
+    <div class="gradient-orb orb-2" aria-hidden="true"></div>
+
+    <div class="progress-bar" aria-hidden="true">
+      <span id="progress-fill"></span>
+    </div>
+
+    <header class="navbar" id="top">
+      <div class="nav-inner">
+        <a class="brand" href="#home" data-magnetic>
+          <span class="brand-mark"></span>
+          <span>Sirson</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#resume" class="nav-link">Resume</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+            <span class="theme-toggle-icon" aria-hidden="true"></span>
+          </button>
+        </nav>
+
+        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero section">
+        <div class="hero-center reveal">
+          <p class="eyebrow reveal-item">Hello, I'm</p>
+          <h1 class="hero-title split-text hero-title-center">
+            <span class="title-word">Sirson</span>
+            <span class="title-word title-word-accent">Sharm<span class="spark-letter">a</span></span>
+          </h1>
+          <div class="hero-role hero-role-center glass">
+            <span class="role-label">Full-Stack Developer</span>
+            <span class="role-divider"></span>
+            <span class="role-rotator role-typewriter" id="rotator" aria-live="polite"></span>
+          </div>
+          <p class="hero-description reveal-item hero-description-center">
+            I design and deploy production-ready full-stack applications, integrating intelligent AI features with clean, scalable architecture.
+          </p>
+          <div class="hero-actions reveal-item hero-actions-center">
+            <a class="btn btn-primary" href="#projects" data-magnetic>View Projects</a>
+            <a class="btn btn-secondary" href="#contact" data-magnetic>Contact Me</a>
+          </div>
+        </div>
+      </section>
+
+<section id="about" class="section">
+  <div class="about-stack">
+    <div class="about-header reveal">
+      <p class="about-eyebrow">// WHO I AM</p>
+      <h2>About Me</h2>
+      <p class="about-subheadline">Crafting full-stack products from Nepal — where clean architecture meets real impact.</p>
+    </div>
+
+    <div class="about-main reveal">
+      <article class="about-photo-card">
+        <div class="about-photo-shell">
+          <img class="about-photo" src="assets/Sirsonimg1.jpg" alt="Portrait of Sirson Sharma" />
+        </div>
+      </article>
+
+      <article class="about-card">
+        <p class="about-name">Sirson Sharma</p>
+        <p class="about-intro">
+          I'm a Full-Stack Developer with hands-on experience across React, Python (Django), and C# (.NET) — building products that are fast, scalable, and thoughtfully architected. I care deeply about clean code, intuitive user experiences, and integrating AI where it genuinely adds value. Currently focused on freelance work and personal projects while expanding my expertise in machine learning and system design.
+        </p>
+        <div class="about-tech-tags">
+          <span>React.js</span>
+          <span>Python / Django</span>
+          <span>C# / .NET</span>
+          <span>REST APIs</span>
+          <span>AI / Machine Learning</span>
+        </div>
+        <div class="about-stats">
+          <span>3+ Years Coding</span>
+          <span>10+ Projects Built</span>
+          <span>Open to Work</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="about-divider reveal">// WHAT I DO</div>
+
+    <div class="about-services-grid reveal">
+      <article class="about-service-card">
+        <span class="about-service-icon about-service-icon-1" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18l-6-6 6-6" />
+            <path d="M15 6l6 6-6 6" />
+          </svg>
+        </span>
+        <h3>Frontend Development</h3>
+        <p>Building responsive, interactive user interfaces with React.js and clean component structure.</p>
+      </article>
+
+      <article class="about-service-card">
+        <span class="about-service-icon about-service-icon-2" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="5" rx="7" ry="3" />
+            <path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5" />
+            <path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" />
+          </svg>
+        </span>
+        <h3>Backend Engineering</h3>
+        <p>Developing secure backends and REST APIs using Python (Django) and C# (.NET).</p>
+      </article>
+
+      <article class="about-service-card">
+        <span class="about-service-icon about-service-icon-3" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="6" height="6" rx="1.5" />
+            <path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3" />
+          </svg>
+        </span>
+        <h3>AI &amp; Machine Learning</h3>
+        <p>Integrating practical Machine Learning and NLP models into smart web applications.</p>
+      </article>
+
+      <article class="about-service-card">
+        <span class="about-service-icon about-service-icon-4" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1.5" />
+            <rect x="14" y="3" width="7" height="7" rx="1.5" />
+            <rect x="3" y="14" width="7" height="7" rx="1.5" />
+            <rect x="14" y="14" width="7" height="7" rx="1.5" />
+          </svg>
+        </span>
+        <h3>Database Design</h3>
+        <p>Designing normalized schemas with secure data handling and efficient queries.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+      <section id="skills" class="section">
+        <div class="section-head reveal skills-head">
+          <p class="section-kicker">// What I Know</p>
+          <h2>Technical Skills</h2>
+          <p class="about-subheadline">
+            A curated stack of tools, languages, and frameworks I use to ship real products.
+          </p>
+        </div>
+
+        <div class="skill-filter-tabs reveal" role="tablist" aria-label="Skill filters">
+          <button class="sft on" type="button" onclick="filterSkills('all', this)">All</button>
+          <button class="sft" type="button" onclick="filterSkills('frontend', this)">Frontend</button>
+          <button class="sft" type="button" onclick="filterSkills('backend', this)">Backend</button>
+          <button class="sft" type="button" onclick="filterSkills('ai', this)">AI &amp; Data</button>
+          <button class="sft" type="button" onclick="filterSkills('db', this)">Database</button>
+          <button class="sft" type="button" onclick="filterSkills('devops', this)">Tools &amp; DevOps</button>
+        </div>
+
+        <div class="skill-cards-grid" id="skillGrid">
+          <article class="skc skc-1 reveal tilt-card" data-cat="frontend">
+            <div class="skc-head">
+              <div class="skc-icon sci-1" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#04101b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="skc-title">Frontend</span>
+            </div>
+            <div class="skc-bars">
+              <div class="skb"><div class="skb-top"><span>React.js</span><span>88%</span></div><div class="skb-bg"><div class="skb-fill sf-1" style="width:88%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>JavaScript (ES6+)</span><span>85%</span></div><div class="skb-bg"><div class="skb-fill sf-1" style="width:85%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>HTML5 &amp; CSS3</span><span>92%</span></div><div class="skb-bg"><div class="skb-fill sf-1" style="width:92%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>Responsive Design</span><span>90%</span></div><div class="skb-bg"><div class="skb-fill sf-1" style="width:90%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>UI Motion &amp; Animation</span><span>78%</span></div><div class="skb-bg"><div class="skb-fill sf-1" style="width:78%"></div></div></div>
+            </div>
+          </article>
+
+          <article class="skc skc-2 reveal tilt-card" data-cat="backend">
+            <div class="skc-head">
+              <div class="skc-icon sci-2" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#04101b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M3 5v14a9 3 0 0 0 18 0V5"></path>
+                  <path d="M3 12a9 3 0 0 0 18 0"></path>
+                </svg>
+              </div>
+              <span class="skc-title">Backend</span>
+            </div>
+            <div class="skc-bars">
+              <div class="skb"><div class="skb-top"><span>Python (Django)</span><span>84%</span></div><div class="skb-bg"><div class="skb-fill sf-2" style="width:84%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>C# / .NET</span><span>76%</span></div><div class="skb-bg"><div class="skb-fill sf-2" style="width:76%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>Node.js &amp; Express</span><span>72%</span></div><div class="skb-bg"><div class="skb-fill sf-2" style="width:72%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>REST API Design</span><span>86%</span></div><div class="skb-bg"><div class="skb-fill sf-2" style="width:86%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>Auth &amp; Security</span><span>74%</span></div><div class="skb-bg"><div class="skb-fill sf-2" style="width:74%"></div></div></div>
+            </div>
+          </article>
+
+          <article class="skc skc-3 reveal tilt-card" data-cat="ai">
+            <div class="skc-head">
+              <div class="skc-icon sci-3" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#04101b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-1.14"></path>
+                  <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-1.14"></path>
+                </svg>
+              </div>
+              <span class="skc-title">AI &amp; ML</span>
+            </div>
+            <div class="skc-bars">
+              <div class="skb"><div class="skb-top"><span>Machine Learning</span><span>70%</span></div><div class="skb-bg"><div class="skb-fill sf-3" style="width:70%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>NLP Integration</span><span>68%</span></div><div class="skb-bg"><div class="skb-fill sf-3" style="width:68%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>scikit-learn</span><span>65%</span></div><div class="skb-bg"><div class="skb-fill sf-3" style="width:65%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>API AI Integration</span><span>80%</span></div><div class="skb-bg"><div class="skb-fill sf-3" style="width:80%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>Data Analysis</span><span>66%</span></div><div class="skb-bg"><div class="skb-fill sf-3" style="width:66%"></div></div></div>
+            </div>
+          </article>
+
+          <article class="skc skc-4 reveal tilt-card" data-cat="db">
+            <div class="skc-head">
+              <div class="skc-icon sci-4" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#04101b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M3 5v14a9 3 0 0 0 18 0V5"></path>
+                  <path d="M3 12a9 3 0 0 0 18 0"></path>
+                </svg>
+              </div>
+              <span class="skc-title">Database</span>
+            </div>
+            <div class="skc-bars">
+              <div class="skb"><div class="skb-top"><span>PostgreSQL</span><span>82%</span></div><div class="skb-bg"><div class="skb-fill sf-4" style="width:82%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>MongoDB</span><span>74%</span></div><div class="skb-bg"><div class="skb-fill sf-4" style="width:74%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>Schema Design</span><span>80%</span></div><div class="skb-bg"><div class="skb-fill sf-4" style="width:80%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>Query Optimization</span><span>72%</span></div><div class="skb-bg"><div class="skb-fill sf-4" style="width:72%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>ORM (Django / EF)</span><span>78%</span></div><div class="skb-bg"><div class="skb-fill sf-4" style="width:78%"></div></div></div>
+            </div>
+          </article>
+
+          <article class="skc skc-5 reveal tilt-card" data-cat="devops">
+            <div class="skc-head">
+              <div class="skc-icon sci-5" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#04101b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+              </div>
+              <span class="skc-title">Tools &amp; DevOps</span>
+            </div>
+            <div class="skc-bars">
+              <div class="skb"><div class="skb-top"><span>Git &amp; GitHub</span><span>90%</span></div><div class="skb-bg"><div class="skb-fill sf-5" style="width:90%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>VS Code</span><span>95%</span></div><div class="skb-bg"><div class="skb-fill sf-5" style="width:95%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>Docker (basics)</span><span>58%</span></div><div class="skb-bg"><div class="skb-fill sf-5" style="width:58%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>Postman &amp; API Testing</span><span>85%</span></div><div class="skb-bg"><div class="skb-fill sf-5" style="width:85%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>Linux / CLI</span><span>72%</span></div><div class="skb-bg"><div class="skb-fill sf-5" style="width:72%"></div></div></div>
+            </div>
+          </article>
+
+          <article class="skc skc-6 reveal tilt-card" data-cat="frontend">
+            <div class="skc-head">
+              <div class="skc-icon sci-6" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#04101b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="13.5" cy="6.5" r=".5"></circle>
+                  <circle cx="17.5" cy="10.5" r=".5"></circle>
+                  <circle cx="8.5" cy="7.5" r=".5"></circle>
+                  <circle cx="6.5" cy="12.5" r=".5"></circle>
+                  <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+                </svg>
+              </div>
+              <span class="skc-title">Design &amp; UX</span>
+            </div>
+            <div class="skc-bars">
+              <div class="skb"><div class="skb-top"><span>Figma</span><span>78%</span></div><div class="skb-bg"><div class="skb-fill sf-6" style="width:78%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>UI / UX Principles</span><span>75%</span></div><div class="skb-bg"><div class="skb-fill sf-6" style="width:75%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>Design Systems</span><span>70%</span></div><div class="skb-bg"><div class="skb-fill sf-6" style="width:70%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>Typography &amp; Color</span><span>80%</span></div><div class="skb-bg"><div class="skb-fill sf-6" style="width:80%"></div></div></div>
+              <div class="skb"><div class="skb-top"><span>Wireframing</span><span>72%</span></div><div class="skb-bg"><div class="skb-fill sf-6" style="width:72%"></div></div></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="skill-tools-strip reveal">
+          <p class="sts-label">Also comfortable with</p>
+          <div class="marquee-wrap">
+            <div class="marquee-track">
+              <div class="m-pill"><span class="m-dot"></span>GitHub</div>
+              <div class="m-pill"><span class="m-dot"></span>Docker</div>
+              <div class="m-pill"><span class="m-dot"></span>REST APIs</div>
+              <div class="m-pill"><span class="m-dot"></span>NumPy / Pandas</div>
+              <div class="m-pill"><span class="m-dot"></span>JWT Auth</div>
+              <div class="m-pill"><span class="m-dot"></span>npm / yarn</div>
+              <div class="m-pill"><span class="m-dot"></span>Webpack / Vite</div>
+              <div class="m-pill"><span class="m-dot"></span>Unit Testing</div>
+              <div class="m-pill"><span class="m-dot"></span>Cloud Basics</div>
+              <div class="m-pill"><span class="m-dot"></span>Raw SQL</div>
+              <div class="m-pill"><span class="m-dot"></span>Tailwind CSS</div>
+              <div class="m-pill"><span class="m-dot"></span>Git Flow</div>
+              <div class="m-pill"><span class="m-dot"></span>Agile / Scrum</div>
+              <div class="m-pill"><span class="m-dot"></span>Postman</div>
+              <div class="m-pill"><span class="m-dot"></span>Linux / CLI</div>
+              <div class="m-pill"><span class="m-dot"></span>VS Code</div>
+              <div class="m-pill"><span class="m-dot"></span>GitHub</div>
+              <div class="m-pill"><span class="m-dot"></span>Docker</div>
+              <div class="m-pill"><span class="m-dot"></span>REST APIs</div>
+              <div class="m-pill"><span class="m-dot"></span>NumPy / Pandas</div>
+              <div class="m-pill"><span class="m-dot"></span>JWT Auth</div>
+              <div class="m-pill"><span class="m-dot"></span>npm / yarn</div>
+              <div class="m-pill"><span class="m-dot"></span>Webpack / Vite</div>
+              <div class="m-pill"><span class="m-dot"></span>Unit Testing</div>
+              <div class="m-pill"><span class="m-dot"></span>Cloud Basics</div>
+              <div class="m-pill"><span class="m-dot"></span>Raw SQL</div>
+              <div class="m-pill"><span class="m-dot"></span>Tailwind CSS</div>
+              <div class="m-pill"><span class="m-dot"></span>Git Flow</div>
+              <div class="m-pill"><span class="m-dot"></span>Agile / Scrum</div>
+              <div class="m-pill"><span class="m-dot"></span>Postman</div>
+              <div class="m-pill"><span class="m-dot"></span>Linux / CLI</div>
+              <div class="m-pill"><span class="m-dot"></span>VS Code</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-head reveal projects-head">
+          <p class="section-kicker">// My Work</p>
+          <h2>Featured Projects</h2>
+          <p class="about-subheadline">
+            A selection of systems and products built with practical engineering, clarity, and a polished finish.
+          </p>
+        </div>
+        <div class="project-carousel" data-project-carousel>
+          <button class="project-nav project-nav--prev" type="button" aria-label="Previous project">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15 18L9 12L15 6" />
+            </svg>
+          </button>
+          <div class="project-window">
+            <div class="project-track">
+              <article class="project-card project-card--cvevo reveal tilt-card">
+                <div class="project-accent"></div>
+                <div class="project-topline">
+                  <span class="project-status status-live"><span class="project-status-dot" aria-hidden="true"></span>LIVE</span>
+                  <div class="project-links">
+                    <a href="https://github.com/Sirson39/CVevo" target="_blank" rel="noreferrer" aria-label="CVevo GitHub" class="project-icon-btn project-icon-btn--label">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-1.5-5-2"></path><path d="M15 21v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77A5.07 5.07 0 0 0 18.91 1s-1.18-.35-3.91 1.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.75c0 5.42 3.3 6.63 6.44 7A3.37 3.37 0 0 0 8 17.13V21"></path></svg>
+                      <span>GitHub</span>
+                    </a>
+                    <a href="https://cvevo.onrender.com/pages/public/index.html" target="_blank" rel="noreferrer" class="project-link">Live Demo</a>
+                  </div>
+                </div>
+                <div class="project-media project-media--cvevo" aria-hidden="true">
+                  <div class="project-media-main">
+                    <img src="assets/cvevo/Cvevo1.png" alt="" class="project-media-img project-media-img--main">
+                  </div>
+                </div>
+                <div class="project-meta-top">
+                  <div class="project-brand project-brand-cvevo" aria-label="CVevo logo">
+                    <div class="brand">
+                      <span class="brand-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7 3h7l4 4v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2"/>
+                          <path d="M9 13h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                          <path d="M9 17h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                      </span>
+                      <span class="brand-text"><span class="c">CV</span><span class="e">evo</span></span>
+                    </div>
+                  </div>
+                </div>
+                <p>Django recruitment platform for resume building, ATS analysis, and candidate ranking.</p>
+                <div class="chip-row">
+                  <span>Django</span>
+                  <span>React</span>
+                  <span>PostgreSQL</span>
+                </div>
+              </article>
+
+              <article class="project-card project-card--moodjournal reveal tilt-card">
+                <div class="project-accent"></div>
+                <div class="project-topline">
+                  <span class="project-status status-live"><span class="project-status-dot" aria-hidden="true"></span>LIVE</span>
+                  <div class="project-links">
+                    <a href="https://github.com/Sirson39/MOODJOURNAL" target="_blank" rel="noreferrer" aria-label="MoodJournal GitHub" class="project-icon-btn project-icon-btn--label">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-1.5-5-2"></path><path d="M15 21v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77A5.07 5.07 0 0 0 18.91 1s-1.18-.35-3.91 1.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.75c0 5.42 3.3 6.63 6.44 7A3.37 3.37 0 0 0 8 17.13V21"></path></svg>
+                      <span>GitHub</span>
+                    </a>
+                    <a href="https://moodjournal-tzpn.onrender.com/" target="_blank" rel="noreferrer" class="project-link">Live Demo</a>
+                  </div>
+                </div>
+                <div class="project-media project-media--moodjournal" aria-hidden="true">
+                  <div class="project-media-main">
+                    <img src="assets/MoodJournal/Mood1.png" alt="" class="project-media-img project-media-img--main">
+                  </div>
+                </div>
+                <div class="project-meta-top">
+                  <div class="project-brand project-brand-moodjournal" aria-label="MoodJournal logo">
+                    <div class="project-brand-icon project-brand-icon--moodjournal" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" class="project-brand-icon-svg" fill="none" aria-hidden="true">
+                        <path d="M8 5.5h8.4c1 0 1.8.8 1.8 1.8V18c0 .9-.7 1.6-1.6 1.6H9c-1.1 0-2-.9-2-2V7.2c0-.9.7-1.7 1.6-1.7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                        <path d="M9.2 8.2h7.2M9.2 11.2h5.2M9.2 14.3h6.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                    <div class="project-brand-wordmark">
+                      <span>MoodJournal</span>
+                    </div>
+                  </div>
+                </div>
+                <p>Private journaling app with mood tracking, calendar views, export, and privacy lock.</p>
+                <div class="chip-row">
+                  <span>C# / .NET</span>
+                  <span>PostgreSQL</span>
+                  <span>React</span>
+                </div>
+              </article>
+
+              <article class="project-card project-card--autobolt reveal tilt-card">
+                <div class="project-accent"></div>
+                <div class="project-topline">
+                  <span class="project-status status-progress"><span class="project-status-dot project-status-dot--wip" aria-hidden="true"></span>WIP</span>
+                  <div class="project-links">
+                    <a href="https://github.com/Sirson39/AutoBolt_frontend" target="_blank" rel="noreferrer" aria-label="AutoBolt GitHub" class="project-icon-btn project-icon-btn--label">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-1.5-5-2"></path><path d="M15 21v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77A5.07 5.07 0 0 0 18.91 1s-1.18-.35-3.91 1.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.75c0 5.42 3.3 6.63 6.44 7A3.37 3.37 0 0 0 8 17.13V21"></path></svg>
+                      <span>GitHub</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="project-media project-media--autobolt" aria-hidden="true">
+                  <div class="project-media-main">
+                    <img src="assets/Auto/Auto1.png" alt="" class="project-media-img project-media-img--main">
+                  </div>
+                </div>
+                <div class="project-meta-top">
+                  <div class="project-brand project-brand-autobolt" aria-label="AutoBolt logo">
+                    <div class="autobolt-logo">
+                      <div class="autobolt-mark">A</div>
+                      <div class="autobolt-copy">
+                        <div class="autobolt-title">AutoBolt</div>
+                        <div class="autobolt-subtitle">Vehicle Parts Management</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p>Garage management system for bookings, inventory, invoices, and service history.</p>
+                <div class="chip-row">
+                  <span>React 19</span>
+                  <span>.NET 10</span>
+                  <span>REST API</span>
+                </div>
+              </article>
+
+              <article class="project-card project-card--dhristi reveal tilt-card">
+                <div class="project-accent"></div>
+                <div class="project-topline">
+                  <span class="project-status status-progress"><span class="project-status-dot project-status-dot--wip" aria-hidden="true"></span>WIP</span>
+                  <div class="project-links">
+                    <a href="https://github.com/Sirson39/Dristhi-Eye-Hospital" target="_blank" rel="noreferrer" aria-label="Drishti HMS GitHub" class="project-icon-btn project-icon-btn--label">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-1.5-5-2"></path><path d="M15 21v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77A5.07 5.07 0 0 0 18.91 1s-1.18-.35-3.91 1.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.75c0 5.42 3.3 6.63 6.44 7A3.37 3.37 0 0 0 8 17.13V21"></path></svg>
+                      <span>GitHub</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="project-media project-media--dhristi" aria-hidden="true">
+                  <div class="project-media-main">
+                    <img src="assets/HMS/Picture1.jpg" alt="" class="project-media-img project-media-img--main">
+                  </div>
+                </div>
+                <div class="project-meta-top">
+                  <div class="project-brand project-brand-dhristi" aria-label="Drishti HMS logo">
+                    <div class="project-brand-icon project-brand-icon--dhristi" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" class="project-brand-icon-svg" fill="none" aria-hidden="true">
+                        <path d="M2.5 12c2.4-3.6 6.1-6 9.5-6 3.6 0 7.3 2.4 9.5 6-2.2 3.6-5.9 6-9.5 6-3.4 0-7.1-2.4-9.5-6Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                        <circle cx="12" cy="12" r="2.6" fill="currentColor"/>
+                        <circle cx="13.2" cy="10.8" r="0.55" fill="#0B1018"/>
+                      </svg>
+                    </div>
+                    <div class="project-brand-wordmark">
+                      <span>Drishti HMS</span>
+                    </div>
+                  </div>
+                </div>
+                <p>Hospital workflow for patient records, appointments, doctors, and clinical operations.</p>
+                <div class="chip-row">
+                  <span>React</span>
+                  <span>Django</span>
+                  <span>PostgreSQL</span>
+                </div>
+              </article>
+            </div>
+          </div>
+          <button class="project-nav project-nav--next" type="button" aria-label="Next project">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 18L15 12L9 6" />
+            </svg>
+          </button>
+          <div class="project-dots" aria-label="Project slider dots"></div>
+        </div>
+        <div class="projects-cta reveal">
+          <a href="https://github.com/Sirson39" target="_blank" rel="noreferrer" class="projects-cta-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-1.5-5-2"></path><path d="M15 21v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77A5.07 5.07 0 0 0 18.91 1s-1.18-.35-3.91 1.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.75c0 5.42 3.3 6.63 6.44 7A3.37 3.37 0 0 0 8 17.13V21"></path></svg>
+            <span>View all in GitHub</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="experience" class="section experience-section" aria-label="Work Experience">
+        <p class="section-eyebrow">// MY JOURNEY</p>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">Roles that shaped my engineering and problem-solving approach</p>
+
+        <div class="timeline">
+          <div class="exp-item reveal-item">
+            <div class="exp-dot"></div>
+            <div class="exp-card">
+              <div class="card-top">
+                <div class="company-row">
+                  <div class="company-icon icon-teal" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="5" y="5" width="14" height="15" rx="1.5"/>
+                      <path d="M9 20v-4h6v4"/>
+                      <path d="M8 8h1.5"/>
+                      <path d="M8 11h1.5"/>
+                      <path d="M8 14h1.5"/>
+                      <path d="M13.5 8H16"/>
+                      <path d="M13.5 11H16"/>
+                      <path d="M13.5 14H16"/>
+                      <path d="M11 5v-2"/>
+                      <path d="M9.5 3h3"/>
+                    </svg>
+                  </div>
+                  <div class="company-meta">
+                    <a class="company-link" href="https://garimaeng.com/" target="_blank" rel="noreferrer">
+                      <span class="company-name">Garima Engineering Consultancy Pvt. Ltd.</span>
+                      <svg class="company-link-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 5h5v5"/>
+                        <path d="M10 14 19 5"/>
+                        <path d="M19 14v5h-5"/>
+                      </svg>
+                    </a>
+                    <span class="company-location">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                      Kathmandu, Nepal
+                    </span>
+                  </div>
+                </div>
+                <div class="date-badge">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+                  2023 — 2025
+                </div>
+              </div>
+
+              <h3 class="role-title">IT Support Staff</h3>
+              <p class="role-summary">Managed IT operations and support for a 50+ person engineering team.</p>
+              <div class="role-badges">
+                <span class="badge badge-teal">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+                  Full-time
+                </span>
+                <span class="badge badge-gray">2 years</span>
+                <span class="badge badge-gray">IT Infrastructure</span>
+              </div>
+
+              <hr class="card-divider" />
+
+              <ul class="bullets">
+                <li>
+                  <span class="bullet-marker"></span>
+                  Provided hardware, software, and network support across the organization to keep daily operations running smoothly
+                </li>
+                <li>
+                  <span class="bullet-marker"></span>
+                  Managed workstations, printers, and LAN/WAN connectivity for 50+ users to reduce downtime
+                </li>
+                <li>
+                  <span class="bullet-marker"></span>
+                  Standardized OS and enterprise software setup, reducing deployment time
+                </li>
+                <li>
+                  <span class="bullet-marker"></span>
+                  Kept IT process and incident records organized for faster troubleshooting
+                </li>
+                <li>
+                  <span class="bullet-marker"></span>
+                  Coordinated vendor procurement, service contracts, and escalations quickly
+                </li>
+              </ul>
+
+              <div class="skills-row">
+                <span class="skill-tag">Network Administration</span>
+                <span class="skill-tag">Windows Server</span>
+                <span class="skill-tag">Hardware Troubleshooting</span>
+                <span class="skill-tag">Active Directory</span>
+                <span class="skill-tag">IT Ops &amp; Documentation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item reveal-item">
+            <div class="exp-dot amber"></div>
+            <div class="exp-card amber-card">
+              <div class="card-top">
+                <div class="company-row">
+                  <div class="company-icon icon-amber" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#EF9F27" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="18" y1="20" x2="18" y2="10"/>
+                      <line x1="12" y1="20" x2="12" y2="4"/>
+                      <line x1="6" y1="20" x2="6" y2="14"/>
+                    </svg>
+                  </div>
+                  <div class="company-meta">
+                    <a class="company-link" href="https://cmt.com.np/" target="_blank" rel="noreferrer">
+                      <span class="company-name">Info Financials Pvt. Ltd.</span>
+                      <svg class="company-link-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 5h5v5"/>
+                        <path d="M10 14 19 5"/>
+                        <path d="M19 14v5h-5"/>
+                      </svg>
+                    </a>
+                    <span class="company-location">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                      Kathmandu, Nepal
+                    </span>
+                  </div>
+                </div>
+                <div class="date-badge">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+                  2025 — 2026
+                </div>
+              </div>
+
+              <h3 class="role-title">Software Development Intern</h3>
+              <p class="role-summary">Built internal full-stack features for financial workflows and reporting.</p>
+              <div class="role-badges">
+                <span class="badge badge-amber">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  Internship
+                </span>
+                <span class="badge badge-gray">~1 year</span>
+                <span class="badge badge-gray">Full Stack</span>
+              </div>
+
+              <hr class="card-divider" />
+
+              <ul class="bullets">
+                <li>
+                  <span class="bullet-marker amber"></span>
+                  Built React and Django features for financial data workflows that supported internal operations
+                </li>
+                <li>
+                  <span class="bullet-marker amber"></span>
+                  Supported schema design and REST API integration to improve data flow
+                </li>
+                <li>
+                  <span class="bullet-marker amber"></span>
+                  Reused React components to keep the UI consistent across screens
+                </li>
+                <li>
+                  <span class="bullet-marker amber"></span>
+                  Reviewed code, documented work, and maintained Git workflows with the team
+                </li>
+                <li>
+                  <span class="bullet-marker amber"></span>
+                  Assisted testing, debugging, and Agile deployments for release readiness
+                </li>
+              </ul>
+
+              <div class="skills-row">
+                <span class="skill-tag amber">React</span>
+                <span class="skill-tag amber">Django</span>
+                <span class="skill-tag amber">REST API</span>
+                <span class="skill-tag amber">PostgreSQL</span>
+                <span class="skill-tag amber">Git</span>
+                <span class="skill-tag amber">Agile</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section education-section">
+        <div class="section-head reveal">
+          <p class="section-kicker">// MY EDUCATION</p>
+          <h2>Education</h2>
+          <p class="section-subline">A clean timeline of my academic path in science and computing.</p>
+        </div>
+
+        <div class="edu-timeline reveal" data-edu-timeline>
+          <div class="edu-rail" aria-hidden="true">
+            <div class="edu-line"></div>
+            <div class="edu-node edu-node--current" data-edu-node></div>
+            <div class="edu-node edu-node--past" data-edu-node></div>
+          </div>
+
+          <div class="edu-cards">
+            <article class="edu-card edu-card--current glass reveal-item" data-edu-card data-edu-state="current">
+              <div class="edu-card-head">
+                <div>
+                  <p class="edu-eyebrow">Bachelor's degree</p>
+                  <h3 class="edu-title">BSc (Hons) Computing</h3>
+                  <p class="edu-place">Islington College, Kathmandu, Nepal</p>
+                </div>
+                <span class="edu-badge edu-badge--current">2024 - 2026</span>
+              </div>
+              <p class="edu-desc">
+                Building software engineering depth across programming, web development, databases, and modern
+                computing concepts.
+              </p>
+              <div class="edu-tags">
+                <span class="edu-tag edu-tag--blue">Software engineering</span>
+                <span class="edu-tag edu-tag--blue">Web and databases</span>
+                <span class="edu-tag edu-tag--blue">Problem solving</span>
+              </div>
+            </article>
+
+            <article class="edu-card edu-card--past glass reveal-item" data-edu-card data-edu-state="past">
+              <div class="edu-card-head">
+                <div>
+                  <p class="edu-eyebrow">Higher secondary (+2)</p>
+                  <h3 class="edu-title">Uniglobe SS College</h3>
+                  <p class="edu-place">Kathmandu, Nepal</p>
+                </div>
+                <span class="edu-badge edu-badge--past">2022 - 2024</span>
+              </div>
+              <p class="edu-desc">
+                Built a foundation in science, logic, and analytical thinking ahead of a computing degree.
+              </p>
+              <div class="edu-tags">
+                <span class="edu-tag edu-tag--amber">Science and logic</span>
+                <span class="edu-tag edu-tag--amber">Academic discipline</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume" class="section resume-section">
+        <div class="section-head reveal resume-head">
+          <p class="section-kicker">// Download & Explore</p>
+          <h2>Resume</h2>
+          <p class="section-subline">
+            A quick preview of my CV, skills, experience, and professional background.
+          </p>
+        </div>
+
+        <div class="resume-preview-card glass reveal">
+          <div class="resume-preview-top">
+            <div>
+              <p class="resume-label">Curriculum Vitae</p>
+            </div>
+
+            <div class="resume-preview-actions">
+              <a class="btn btn-secondary resume-btn-secondary" href="./Sirson%20Sharma%20CV.pdf" target="_blank" rel="noreferrer">
+                Open CV
+              </a>
+
+              <a class="btn btn-primary resume-icon-btn" href="./Sirson%20Sharma%20CV.pdf" download aria-label="Download CV">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3v11"></path>
+                  <path d="M8 10.5 12 14.5 16 10.5"></path>
+                  <path d="M5 20h14"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="resume-pdf-box">
+            <iframe
+              class="resume-pdf-frame"
+              src="./Sirson%20Sharma%20CV.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH&zoom=page-width"
+              title="Sirson Sharma CV"
+              loading="lazy"
+              scrolling="no"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-clean-section">
+        <div class="section-head contact-clean-head reveal">
+          <p class="section-kicker">// Contact</p>
+          <h2>Get In Touch</h2>
+          <p class="section-subline">Have a project in mind? Let's build something amazing together.</p>
+        </div>
+
+        <div class="contact-clean-grid">
+          <aside class="contact-clean-info glass reveal">
+            <div class="contact-clean-top">
+              <div class="contact-clean-badge" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12a10 10 0 1 1-4-8"/><polyline points="16 4 22 4 22 10"/><line x1="22" y1="4" x2="12" y2="14"/></svg>
+              </div>
+              <div>
+                <div class="contact-clean-label">Let's Talk</div>
+                <a class="contact-clean-email" href="mailto:sirsonsharma39@gmail.com">sirsonsharma39@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-clean-meta">
+              <div class="contact-clean-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Nepal</span>
+              </div>
+              <div class="contact-clean-meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Usually responds within 24 hours</span>
+              </div>
+            </div>
+
+            <div class="contact-clean-divider"></div>
+
+            <div class="contact-clean-connect">Connect with me</div>
+            <div class="contact-clean-socials">
+              <a class="contact-clean-social" href="https://github.com/Sirson39" target="_blank" rel="noreferrer">
+                <span class="contact-clean-social-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                </span>
+                <span class="contact-clean-social-copy">
+                  <strong>GitHub</strong>
+                  <span>@Sirson39</span>
+                </span>
+                <span class="contact-clean-arrow">↗</span>
+              </a>
+              <a class="contact-clean-social" href="https://www.linkedin.com/in/sirsonsharma/" target="_blank" rel="noreferrer">
+                <span class="contact-clean-social-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.08 1 2.5 1s2.48 1.12 2.48 2.5zM.2 8.2h4.6V24H.2V8.2zM8.1 8.2h4.4v2.2h.1c.6-1.1 2.2-2.3 4.6-2.3 4.9 0 5.8 3.2 5.8 7.3V24h-4.6v-7.1c0-1.7 0-3.9-2.4-3.9s-2.8 1.9-2.8 3.8V24H8.1V8.2z"/></svg>
+                </span>
+                <span class="contact-clean-social-copy">
+                  <strong>LinkedIn</strong>
+                  <span>/in/sirsonsharma/</span>
+                </span>
+                <span class="contact-clean-arrow">↗</span>
+              </a>
+            </div>
+          </aside>
+
+          <form class="contact-clean-form glass reveal" id="contact-form">
+            <h2>Send a message</h2>
+            <div class="contact-clean-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="What's your name?">
+            </div>
+            <div class="contact-clean-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="your.email@example.com">
+            </div>
+            <div class="contact-clean-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project or idea..."></textarea>
+            </div>
+            <button class="submit-btn contact-clean-submit" type="submit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send message
+            </button>
+            <p class="contact-form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>© 2026 Sirson Sharma</p>
+        <p class="footer-note"><span class="footer-status-dot" aria-hidden="true"></span>Available for hire</p>
+      </div>
+    </footer>
+
+    <a class="back-to-top" href="#home" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 19V5"></path>
+        <path d="M6.5 10.5 12 5l5.5 5.5"></path>
+      </svg>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
