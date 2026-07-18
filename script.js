@@ -130,6 +130,13 @@ themeToggle?.addEventListener("click", () => {
   setStoredTheme(nextTheme);
 });
 
+function setNavState(isOpen) {
+  if (!navLinks || !navToggle) return;
+  navLinks.classList.toggle("open", isOpen);
+  navToggle.setAttribute("aria-expanded", String(isOpen));
+  navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+}
+
 document.querySelectorAll("a[href^='#']").forEach((link) => {
   link.addEventListener("click", (event) => {
     const targetId = link.getAttribute("href");
@@ -138,16 +145,21 @@ document.querySelectorAll("a[href^='#']").forEach((link) => {
       if (target) {
         event.preventDefault();
         target.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "start" });
-        navLinks.classList.remove("open");
-        navToggle?.setAttribute("aria-expanded", "false");
+        setNavState(false);
       }
     }
   });
 });
 
 navToggle?.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
+  const isOpen = !navLinks.classList.contains("open");
+  setNavState(isOpen);
+});
+
+document.addEventListener("pointerdown", (event) => {
+  if (!navLinks || !navToggle || !navLinks.classList.contains("open")) return;
+  if (navLinks.contains(event.target) || navToggle.contains(event.target)) return;
+  setNavState(false);
 });
 
 const reveals = document.querySelectorAll(".reveal, .reveal-item");
@@ -510,6 +522,7 @@ document.querySelectorAll(".project-card").forEach((card) => {
 });
 
 const projectCarousel = document.querySelector("[data-project-carousel]");
+const marqueeWrap = document.querySelector(".marquee-wrap");
 
 if (projectCarousel) {
   const track = projectCarousel.querySelector(".project-track");
@@ -668,4 +681,14 @@ if (projectCarousel) {
 
   buildDots();
   updateCarousel();
+}
+
+if (marqueeWrap) {
+  const pauseMarquee = () => marqueeWrap.classList.add("is-paused");
+  const resumeMarquee = () => marqueeWrap.classList.remove("is-paused");
+
+  marqueeWrap.addEventListener("pointerdown", pauseMarquee);
+  marqueeWrap.addEventListener("pointerup", resumeMarquee);
+  marqueeWrap.addEventListener("pointercancel", resumeMarquee);
+  marqueeWrap.addEventListener("pointerleave", resumeMarquee);
 }

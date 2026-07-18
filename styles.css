@@ -293,26 +293,65 @@ main {
 
 .nav-toggle {
   display: none;
-  width: 42px;
-  height: 42px;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
+  position: relative;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.04));
   color: var(--text);
   padding: 0;
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .nav-toggle span {
+  position: absolute;
+  left: 10px;
   display: block;
-  width: 18px;
-  height: 2px;
-  margin: 0 auto;
+  width: 22px;
+  height: 2.5px;
+  margin: 0;
   background: currentColor;
   border-radius: 999px;
+  transition: transform 0.28s ease, opacity 0.2s ease, width 0.28s ease;
 }
 
-.nav-toggle span + span {
-  margin-top: 5px;
+.nav-toggle span:nth-child(1) {
+  top: 13px;
+}
+
+.nav-toggle span:nth-child(2) {
+  top: 21px;
+}
+
+.nav-toggle span:nth-child(3) {
+  top: 29px;
+}
+
+.nav-toggle:hover {
+  transform: translateY(-1px);
+  border-color: rgba(114, 240, 255, 0.22);
+  background: linear-gradient(180deg, rgba(114, 240, 255, 0.12), rgba(255, 255, 255, 0.05));
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.18);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 body[data-theme="light"] {
@@ -828,6 +867,36 @@ body[data-theme="light"] .back-to-top:hover {
   text-shadow: 0 0 30px rgba(114, 240, 255, 0.08);
 }
 
+.hero-title .title-word {
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease,
+    text-shadow 0.35s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-title {
+    cursor: default;
+  }
+
+  .hero-title:hover .title-word-primary {
+    transform: translateY(-4px) rotateX(8deg);
+    filter: brightness(1.08);
+    text-shadow: 0 0 34px rgba(114, 240, 255, 0.18);
+  }
+
+  .hero-title:hover .title-word-accent {
+    transform: translateY(4px) rotateX(-8deg);
+    filter: brightness(1.12);
+    text-shadow: 0 0 34px rgba(168, 140, 255, 0.2);
+  }
+
+  .hero-title:hover .spark-letter::after {
+    opacity: 1;
+    transform: scale(1.14) rotate(22deg);
+  }
+}
+
 .title-word {
   opacity: 0;
   transform: rotateX(95deg) translateY(0.24em);
@@ -848,11 +917,11 @@ body[data-theme="light"] .back-to-top:hover {
 }
 
 .spark-letter::after {
-  --spark-size: 0.48em;
+  --spark-size: 0.42em;
   content: "";
   position: absolute;
-  right: -0.28em;
-  top: -0.14em;
+  right: -0.12em;
+  top: -0.28em;
   width: var(--spark-size);
   height: var(--spark-size);
   border-radius: 50%;
@@ -889,6 +958,7 @@ body[data-theme="light"] .back-to-top:hover {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.03);
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.16);
+  max-width: min(100%, calc(100vw - 36px));
 }
 
 .hero-role-center {
@@ -903,6 +973,7 @@ body[data-theme="light"] .back-to-top:hover {
   font-family: "Space Grotesk", sans-serif;
   letter-spacing: 0.04em;
   white-space: nowrap;
+  min-width: 0;
 }
 
 .role-label {
@@ -914,6 +985,8 @@ body[data-theme="light"] .back-to-top:hover {
   color: var(--accent);
   font-weight: 600;
   min-width: 18ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .role-typewriter {
@@ -1489,8 +1562,12 @@ body[data-theme="light"] .back-to-top:hover {
 
 @media (max-width: 960px) {
   #education .edu-timeline {
-    grid-template-columns: 22px minmax(0, 1fr);
-    gap: 12px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  #education .edu-cards {
+    width: 100%;
   }
 }
 
@@ -3573,10 +3650,29 @@ h4,
     padding: 10px 14px;
   }
 
+  .nav-toggle {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+  }
+
+  .nav-toggle span:nth-child(1) {
+    top: 12px;
+  }
+
+  .nav-toggle span:nth-child(2) {
+    top: 20px;
+  }
+
+  .nav-toggle span:nth-child(3) {
+    top: 28px;
+  }
+
   .hero-title {
     font-size: clamp(2.8rem, 14vw, 4.4rem);
     flex-wrap: wrap;
-    row-gap: 0;
+    row-gap: 0.1em;
+    gap: 0.14em;
   }
 
   .hero-title span {
@@ -3584,18 +3680,31 @@ h4,
   }
 
   .hero-role {
-    gap: 10px;
-    padding: 10px 14px;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    gap: 8px 10px;
+    padding: 12px 14px;
     border-radius: 20px;
+    flex-wrap: wrap;
+    text-align: center;
   }
 
+  .role-label,
   .role-typewriter {
     min-width: 0;
     width: auto;
-    text-align: left;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .role-label {
+    flex: 1 1 100%;
   }
 
   .role-divider {
+    display: none;
     height: 16px;
   }
 
@@ -4095,6 +4204,10 @@ h4,
 }
 
 .marquee-wrap:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-wrap.is-paused .marquee-track {
   animation-play-state: paused;
 }
 
@@ -5054,9 +5167,13 @@ h4,
     --visible: 1;
   }
 
+  .project-carousel {
+    padding-bottom: 86px;
+  }
+
   .project-nav {
     top: auto;
-    bottom: -54px;
+    bottom: 18px;
     width: 38px;
     height: 38px;
     border-radius: 12px;
@@ -5072,20 +5189,53 @@ h4,
   }
 
   .project-nav:disabled {
-    transform: scale(0.85);
+    visibility: visible;
+    opacity: 0.28;
+    pointer-events: none;
+    transform: none;
   }
 
   .project-nav--prev {
-    left: calc(50% - 50px);
+    left: calc(50% - 52px);
   }
 
   .project-nav--next {
-    right: calc(50% - 50px);
+    right: calc(50% - 52px);
   }
 
   .project-dots {
-    margin-top: 68px;
+    margin-top: 18px;
   }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .btn:active,
+  .nav-toggle:active,
+  .project-nav:active,
+  .project-link:active,
+  .project-icon-btn:active,
+  .projects-cta-btn:active,
+  .contact-clean-social:active,
+  .resume-btn-secondary:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  .project-card:active,
+  .about-service-card:active,
+  .about-tech-tags span:active,
+  .about-stats span:active,
+  .sft:active,
+  .skc:active,
+  .contact-link-card:active,
+  .about-photo-card:active {
+    transform: translateY(-1px);
+  }
+
+  .project-media-main:active .project-media-img,
+  .about-photo-card:active .about-photo {
+    transform: scale(1.02);
+  }
+
 }
 
 /* Fix Drishti image left-side cut */
